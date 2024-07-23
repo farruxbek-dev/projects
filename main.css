@@ -1,0 +1,98 @@
+.players-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  width: auto;
+  justify-content: space-between;
+  padding-left: 60px;
+  margin-top: 20px;
+}
+.card-image {
+  height: 250px;
+  width: 247px;
+}
+.player-card {
+  width: 247px;
+  height: 250px;
+  position: relative;
+  transition: all 0.15s;
+  margin-bottom: 20px;
+}
+.player-card:hover {
+  box-shadow: 0 10px 10px gray;
+}
+
+.card-position {
+  background-color: transparent;
+  width: 69px;
+  height: 39px;
+  position: absolute;
+  top: 5px;
+  left: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: black;
+  border-radius: 4px;
+}
+.card-country {
+  height: 40px;
+  position: absolute;
+  top: 4px;
+  right: 10px;
+}
+.player-name {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 22px;
+  color: white;
+}
+.player-image {
+  object-fit: cover;
+  object-position: top;
+  height: 202px;
+  width: 238px;
+  position: absolute;
+  bottom: 47px;
+  left: 4px;
+}
+.position-par {
+  margin-bottom: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  color: rgb(0,44,84);
+  transition: all 0.15s;
+  grid-column-start: 1;
+  grid-column-end: 5;
+}
+.position-par:hover {
+  color: rgb(197,0,26);
+}
+
+/************************************************************************************
+smaller than 980
+*************************************************************************************/
+@media screen and (max-width: 980px) {
+  .players-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  }
+  
+  /************************************************************************************
+  smaller than 650
+  *************************************************************************************/
+  @media screen and (max-width: 650px) {
+    .players-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  /************************************************************************************
+  smaller than 560
+  *************************************************************************************/
+  @media screen and (max-width: 480px) {
+    .players-grid {
+      grid-template-columns: 1fr;
+    }
+  }
